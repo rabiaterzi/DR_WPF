@@ -8,21 +8,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace hellowpf
 {
 	/// <summary>
-	/// Interaction logic for uyelik.xaml
+	/// Interaction logic for uye.xaml
 	/// </summary>
-	public partial class uyelik : Page
+	public partial class uye : Window
 	{
-		public uyelik()
+		public uye()
 		{
 			InitializeComponent();
+			if (this.WindowState == System.Windows.WindowState.Normal)
+			{
+				this.WindowState = System.Windows.WindowState.Maximized;
+			}
+			else
+			{
+				this.WindowState = System.Windows.WindowState.Normal;
+			}
 		}
-
 		private void Btngetcategories(object sender, RoutedEventArgs e)
 		{
 
@@ -45,7 +51,7 @@ namespace hellowpf
 
 		private void anasayfa(object sender, RoutedEventArgs e)
 		{
-			
+
 		}
 	}
 }

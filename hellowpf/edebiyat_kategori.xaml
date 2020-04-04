@@ -1,0 +1,92 @@
+﻿<Window x:Class="hellowpf.edebiyat_kategori"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hellowpf"
+        mc:Ignorable="d"
+        Title="edebiyat_kategori" Height="1000" Width="1600">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70"/>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="20"/>
+			<RowDefinition Height="20"/>
+			<RowDefinition Height="70"/>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Border Grid.Row="0" Background="#f9f8f4" HorizontalAlignment="Left" Width="1600">
+			<DockPanel>
+				<Button Width="72" Height="56" Margin="40,0,0,0" Click="anasayfa">
+					<Image Source="https://www.dr.com.tr/Themes/DR/Content/assets/images/general/head-logo.png"/>
+				</Button>
+				<Button Name="btnkategori" Background="#f9f8f4" Click="Btngetcategories" HorizontalAlignment="Left" Width="128" Margin="60,0,0,0" Height="50">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="https://cdn1.iconfinder.com/data/icons/common-version-3-0/1024/menu-512.png" Width="37" Height="40"/>
+						<TextBlock FontSize="17" FontStyle="Normal" DockPanel.Dock="Bottom" Height="38" VerticalAlignment="Center"><Run Text="   MENÜ" /></TextBlock>
+					</StackPanel>
+				</Button>
+
+				<Image Source="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png" Margin="50,0,0,0" Height="30" Width="30"/>
+				<TextBox Text=" HANGİ ÜRÜNÜ ARIYORSUN ?" Width="820" Height="52" FontSize="18" Name="arama" VerticalContentAlignment="Center"/>
+				<Button x:Name="btnara" HorizontalAlignment="Left" Click="Btnara" Content="ARA" Height="52" Width="81" Background="White" Margin="0,0,0,0"/>
+				<Button x:Name="btnuyegirisi" Height="52" Click="Btnuyegirisi" Content="ÜYE GİRİŞİ" Width="80" Background="#f9f8f4" Margin="20,0,0,0" BorderBrush="#FFFAF5F5"/>
+				<Button x:Name="btnsepet" Background="#f9f8f4" Click="Btnsepet" Width="98" Height="52" Margin="0,0,50,0" BorderBrush="#FFFFFDFD">
+					<StackPanel Orientation="Horizontal">
+						<TextBlock FontSize="15" FontStyle="Normal" DockPanel.Dock="Bottom" Height="38"><Run Text="SEPETİM" /></TextBlock>
+						<Image Source="https://cdn0.iconfinder.com/data/icons/line-shopping-2/270912/01-512.png" Width="37" Height="25"/>
+					</StackPanel>
+				</Button>
+			</DockPanel>
+		</Border>
+		<Border Grid.Row="1">
+			<DockPanel>
+				<Button Content="ANA SAYFA  >" Width="85" BorderBrush="White" Foreground="LightGray" Background="White" Margin="210,0,0,0" FontSize="13" Click="anasayfa"/>
+				<Button Content="Kitap  >" Width="65" BorderBrush="White" Foreground="LightGray" Background="White" Margin="5,0,0,0" FontSize="15" Click="kitap"/>
+				<Label Content="Edebiyat" FontSize="15" VerticalAlignment="Center" Width="100" Margin="0,0,1050,0" />
+			</DockPanel>
+		</Border>
+		<Border Grid.Row="2">
+			<Label Content="Edebiyat" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"/>
+		</Border>
+		<Border Grid.Row="3">
+			<WrapPanel Width="1100" Margin="0,0,15,0">
+				<Button Content="Kitap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Background="#b0b6c0" Height="41" Foreground="White" BorderBrush="Transparent" FontSize="15" Click="kitap"/>
+				<Button Content="Edebiyat" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Background="#b0b6c0" Height="41" Foreground="White" BorderBrush="Transparent" Margin="15,0,0,0" FontSize="15"/>
+				<Button Content="Roman" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Height="41" Foreground="Black" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,0,0,0" FontSize="15" />
+				<Button Content="Şiir" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="117" Height="41" Foreground="Black" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,0,0,0" FontSize="15" />
+				<Button Content="Deneme/Yazın" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Height="41" Foreground="Black" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,0,0,0" FontSize="15" />
+				<Button Content="Türk Öykü" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Height="41" Foreground="Black" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,0,0,0" FontSize="15" />
+				<Button Content="Edebiyat İnceleme" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Height="41" Foreground="Black" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,0,0,0" FontSize="15" />
+				<Button Content="Biyografi Oto Biyografi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Height="41" Background="Transparent" BorderBrush="#DEDEDE" Margin="0,15,0,0" FontSize="15"/>
+				<Button Content="Türk Günlük Anı" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="149" Height="41" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,15,0,0" FontSize="15"/>
+				<Button Content="Aylık Dergi" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="123" Height="41" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,15,0,0" FontSize="15"/>
+				<Button Content="Anlatı" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="130" Height="41" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,15,0,0" FontSize="15"/>
+				<Button Content="Dünya Öykü" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="148" Height="41" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,15,0,0" FontSize="15"/>
+				<Button Content="Dünya Günlük Anı" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Height="41" Background="Transparent" BorderBrush="#DEDEDE" Margin="15,15,0,0" FontSize="15"/>
+			</WrapPanel>
+		</Border>
+		<Border Grid.Row="4">
+			<Button Content="Tüm Kategorileri Göster" BorderBrush="White" Background="White" Width="150" FontWeight="Bold" />
+		</Border>
+		<Border Grid.Row="5">
+			<Label Content=" " Width="1120" Height="1" Background="LightGray"/>
+		</Border>
+		<Border Grid.Row="6">
+			<DockPanel>
+				<ComboBox ItemsSource="{Binding Cins}" HorizontalAlignment="Left"  VerticalAlignment="Bottom"  Width="140" Height="40" Margin="210,0,0,0"/>
+				<ComboBox ItemsSource="{Binding Fiyat}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="140" Height="40" Margin="20,0,0,0"/>
+				<ComboBox ItemsSource="{Binding Dil}" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Width="140" Height="40" Margin="20,0,0,0"/>
+				<TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="YAZAR" Foreground="Gray" FontWeight="Bold"  VerticalAlignment="Bottom" Width="278" Margin="20,0,0,0"/>
+				<ComboBox ItemsSource="{Binding Coksatan}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="140" Height="40" Margin="20,0,0,0"/>
+				<CheckBox  Margin="20,0,0,10" VerticalAlignment="Bottom"/>
+				<Label Content="Tükenenleri Göster" Margin="0,0,240,5" Height="50" Width="150" VerticalContentAlignment="Bottom" FontSize="15" VerticalAlignment="Bottom"/>
+			</DockPanel>
+		</Border>
+		<Border Grid.Row="7">
+
+		</Border>
+	</Grid>
+</Window>

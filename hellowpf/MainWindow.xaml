@@ -5,34 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hellowpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="3000" Width="1600">
+        Title="MainWindow" Height="5000" Width="1600" Loaded="Window_Loaded">
 
 	<ScrollViewer VerticalScrollBarVisibility="Visible" >
-		
+
 		<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="70"/>
 				<RowDefinition Height="350"/>
-				<RowDefinition Height="330"/>
-				<RowDefinition Height="320"/>
-				<RowDefinition Height="400"/>
-				<RowDefinition/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="55"/>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="210"/>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="420"/>
+				<RowDefinition Height="210"/>
+				<RowDefinition />
 			</Grid.RowDefinitions>
 			<Border Grid.Row="0" Background="#f9f8f4" HorizontalAlignment="Left" Width="1600">
 				<DockPanel>
-					<Image Source="https://www.dr.com.tr/Themes/DR/Content/assets/images/general/head-logo.png" Width="72" Margin="50,0,0,0" Height="72"/>
+					<Button Width="72" Height="56" Margin="40,0,0,0" >
+						<Image Source="https://www.dr.com.tr/Themes/DR/Content/assets/images/general/head-logo.png"/>
+					</Button>
 					<Button Name="btnkategori" Background="#f9f8f4" Click="Btngetcategories" HorizontalAlignment="Left" Width="128" Margin="60,0,0,0" Height="50">
 						<StackPanel Orientation="Horizontal">
-							<Image Source="C:\Users\terzi\OneDrive\Masaüstü\İMAGES\menu.png" Width="37" Height="50"/>
-							<TextBlock FontSize="17" FontStyle="Normal" DockPanel.Dock="Bottom" Height="38"><Run Text="   MENÜ" /></TextBlock>
+							<Image Source="https://cdn1.iconfinder.com/data/icons/common-version-3-0/1024/menu-512.png" Width="37" Height="40"/>
+							<TextBlock FontSize="17" FontStyle="Normal" DockPanel.Dock="Bottom" Height="38" VerticalAlignment="Center"><Run Text="   MENÜ" /></TextBlock>
 						</StackPanel>
 					</Button>
-					
+
 					<Image Source="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png" Margin="50,0,0,0" Height="30" Width="30"/>
-					<TextBox Text=" HANGİ ÜRÜNÜ ARIYORSUN ?" Width="820" Height="52" FontSize="18"/>
+					<TextBox Text=" HANGİ ÜRÜNÜ ARIYORSUN ?" Width="820" Height="52" FontSize="18" Name="arama" VerticalContentAlignment="Center"/>
 					<Button x:Name="btnara" HorizontalAlignment="Left" Click="Btnara" Content="ARA" Height="52" Width="81" Background="White" Margin="0,0,0,0"/>
-					<Button x:Name="btnuyegirisi" Height="52" Click="Btnuyegirisi" Content="ÜYE GİRİŞİ" Width="80" Background="#f9f8f4" Margin="20,0,0,0"/>
-					<Button x:Name="btnsepet" Background="#f9f8f4" Click="Btnsepet" Width="98" Height="52" Margin="0,0,50,0">
+					<Button x:Name="btnuyegirisi" Height="52" Click="Btnuyegirisi" Content="ÜYE GİRİŞİ" Width="80" Background="#f9f8f4" Margin="20,0,0,0" BorderBrush="#FFFAF5F5"/>
+					<Button x:Name="btnsepet" Background="#f9f8f4" Click="Btnsepet" Width="98" Height="52" Margin="0,0,50,0" BorderBrush="#FFFFFDFD">
 						<StackPanel Orientation="Horizontal">
 							<TextBlock FontSize="15" FontStyle="Normal" DockPanel.Dock="Bottom" Height="38"><Run Text="SEPETİM" /></TextBlock>
 							<Image Source="https://cdn0.iconfinder.com/data/icons/line-shopping-2/270912/01-512.png" Width="37" Height="25"/>
@@ -42,116 +57,116 @@
 			</Border>
 			<Border Grid.Row="1" Name="menu">
 				<DockPanel>
-					<Image Name="festival" Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0220_d_u_24_1140x290_mart_kitap_festivali_lp.jpg" Height="280" Margin="240,0,0,0"/>
-				<WrapPanel Name="kategoriler" Height="350" Width="1601" Margin="150,0,0,0">
+					<Image Name="festival" Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0220_d_u_24_1140x290_mart_kitap_festivali_lp.jpg" Height="280" Margin="210,0,0,0"/>
+					<WrapPanel Name="kategoriler" Height="350" Width="1601" Margin="150,0,0,0">
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="128,28,0,0">
+							<Button Background="White" Width="200" Margin="128,28,0,0" BorderBrush="White" Height="171" Click="kitapkategori">
 								<StackPanel>
-									<Image Source="http://icons.iconarchive.com/icons/icons8/ios7/256/Science-Literature-icon.png" Height="100"/>
+									<Image Source="http://icons.iconarchive.com/icons/icons8/ios7/256/Science-Literature-icon.png" Height="60"/>
 									<Label Content="Kitap" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="0,28,0,0">
+							<Button Background="White" Width="200" Margin="0,28,0,0" Height="171">
 								<StackPanel>
-									<Image Source="https://kbstatic1-a.akamaihd.net/1.0.0.6553/Images/favicon/OGP.png" Height="100"/>
+									<Image Source="https://kbstatic1-a.akamaihd.net/1.0.0.6553/Images/favicon/OGP.png" Height="60"/>
 									<Label Content="E - Kitap" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="0,28,0,0">
+							<Button Background="White" Width="200" Margin="0,28,0,0" BorderBrush="White" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/photo-512.png" Height="100"/>
+									<Image Source="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/photo-512.png" Height="60"/>
 									<Label Content="Elektronik" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="0,28,0,0">
+							<Button Background="White" Width="200" Margin="0,28,0,0" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn1.iconfinder.com/data/icons/adventure-outline-1/64/Adventure-Line-23-512.png" Height="100"/>
+									<Image Source="https://cdn1.iconfinder.com/data/icons/adventure-outline-1/64/Adventure-Line-23-512.png" Height="60"/>
 									<Label Content="Hobi ve Oyuncak" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="0,28,0,0">
+							<Button Background="White" Width="200" Margin="0,28,0,0" BorderBrush="White" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/15.Pencil-512.png" Height="100"/>
+									<Image Source="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/15.Pencil-512.png" Height="60"/>
 									<Label Content="Kırtasiye" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="0,28,0,0">
+							<Button Background="White" Width="200" Margin="0,28,0,0" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn3.iconfinder.com/data/icons/lined-office-1/64/Artboard_18-512.png" Height="100"/>
+									<Image Source="https://cdn3.iconfinder.com/data/icons/lined-office-1/64/Artboard_18-512.png" Height="60"/>
 									<Label Content="Hediyelik Eşyalar" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="0,28,0,0">
+							<Button Background="White" Width="200" Margin="0,28,0,0" BorderBrush="White" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn2.iconfinder.com/data/icons/multimedia-26/24/multimedia-19-128.png" Height="100"/>
+									<Image Source="https://cdn2.iconfinder.com/data/icons/multimedia-26/24/multimedia-19-128.png" Height="60"/>
 									<Label Content="Oyun ve Konsol" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Margin="128,0,0,0" Height="160">
+							<Button Background="White" Width="200" Margin="128,0,0,0" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn2.iconfinder.com/data/icons/essential-web-1-1/50/bookmark-mark-book-read-chapter-512.png" Height="100"/>
+									<Image Source="https://cdn2.iconfinder.com/data/icons/essential-web-1-1/50/bookmark-mark-book-read-chapter-512.png" Height="60"/>
 									<Label Content="Yeni Çıkan Kitaplar" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Height="160">
+							<Button Background="White" Width="200" Height="171" BorderBrush="White">
 								<StackPanel>
-									<Image Source="https://cdn0.iconfinder.com/data/icons/iconsweets2/40/winners.png" Height="100"/>
+									<Image Source="https://cdn0.iconfinder.com/data/icons/iconsweets2/40/winners.png" Height="60"/>
 									<Label Content="Çok Satanlar" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Height="160">
+							<Button Background="White" Width="200" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn4.iconfinder.com/data/icons/travel-2-11/512/travel-tourism-vacation-holiday-31-512.png" Height="100"/>
+									<Image Source="https://cdn4.iconfinder.com/data/icons/travel-2-11/512/travel-tourism-vacation-holiday-31-512.png" Height="60"/>
 									<Label Content="Spor ve Outdoor" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Height="160">
+							<Button Background="White" Width="200" Height="171" BorderBrush="White">
 								<StackPanel>
-									<Image Source="https://cdn1.iconfinder.com/data/icons/electronics-outline-24/24/media_player_media_movie_player_multimedia_video_player-512.png" Height="100"/>
+									<Image Source="https://cdn1.iconfinder.com/data/icons/electronics-outline-24/24/media_player_media_movie_player_multimedia_video_player-512.png" Height="60"/>
 									<Label Content="Film" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Height="160">
+							<Button Background="White" Width="200" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-48-512.png" Height="100"/>
+									<Image Source="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-48-512.png" Height="60"/>
 									<Label Content="Müzik" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Height="160">
+							<Button Background="White" Width="200" Height="171" BorderBrush="White">
 								<StackPanel>
-									<Image Source="https://cdn1.iconfinder.com/data/icons/arrows-elements-outline/128/ic_bell_alarm_switch-512.png" Height="100"/>
+									<Image Source="https://cdn1.iconfinder.com/data/icons/arrows-elements-outline/128/ic_bell_alarm_switch-512.png" Height="60"/>
 									<Label Content="Kampanyalar" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
 						</StackPanel>
 						<StackPanel>
-							<Button Background="White" Width="200" Height="160">
+							<Button Background="White" Width="200" Height="171">
 								<StackPanel>
-									<Image Source="https://cdn0.iconfinder.com/data/icons/shopping-358/32/Store-512.png" Height="100"/>
+									<Image Source="https://cdn0.iconfinder.com/data/icons/shopping-358/32/Store-512.png" Height="60"/>
 									<Label Content="Mağaza Etkinlikleri" FontSize="22" HorizontalAlignment="Center"/>
 								</StackPanel>
 							</Button>
@@ -160,17 +175,303 @@
 				</DockPanel>
 			</Border>
 			<Border Grid.Row="2">
-				<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-vakit-gecirme-ana-sayfa.jpg" Width="700" Height="300" Margin="0,0,369,0" />
+				<StackPanel>
+					<Border Grid.Row="0" Height="370">
+						<DockPanel>
+							<Button Height="25" Width="25" Content="&lt;" Background="White" Margin="180,0,0,0" BorderBrush="White" FontSize="20" />
+							<Image Name="resim1" Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-vakit-gecirme-ana-sayfa.jpg" Width="800" Height="370" Margin="0,2,0,10" />
+							<Button Height="25" Width="25" Content=">" Background="White" BorderBrush="White" FontSize="20"/>
+							<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/ayin-yayinevi-sel-gf.jpg" Margin="0,13,230,0" Height="295" Width="350"/>
+						</DockPanel>
+					</Border>
+					<Border Grid.Row="1" Height="50">
+						<StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="50">
+							<Button Width="15" Height="15" Margin="350,0,0,5" Click="Button_Click" Name="buton1" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_1"  Name="buton2" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_2" Name="buton3" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_3" Name="buton4" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_4" Name="buton5" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_5" Name="buton6" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_6" Name="buton7" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_7" Name="buton8" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_8" Name="buton9" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_9" Name="buton10" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_10" Name="buton11" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}" ></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_11" Name="buton12" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_12" Name="buton13" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_13" Name="buton14" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_14" Name="buton15" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+							<Button Width="15" Height="15" Margin="10,0,0,5" Click="Button_Click_15" Name="buton16" BorderBrush="White" Background="#FFBAB2B2" Style="{DynamicResource DaireButon}"></Button>
+						</StackPanel>
+					</Border>
+				</StackPanel>
 			</Border>
 			<Border Grid.Row="3">
-
+				<Label Content="Kral Şakir 8, satışta!..>" Width="1100" Background="Red" Foreground="White" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 			</Border>
 			<Border Grid.Row="4">
-				
+				<DockPanel>
+					<Label Content=" " Width="450" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
+					<TextBlock Text="Kitap" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
+					<Label Content=" " Width="335" Height="10" Background="#FFEBE7E7" Margin="28,0,0,0"/>
+					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="5">
+				<DockPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="6">
+				<DockPanel>
+					<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/cizgi-roman-3lu-2.jpg" Height="160" Margin="210,0,0,0"/>
+					<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/yabanci-dil-kitaplari-no-campaign.jpg" Height="160" Margin="50,0,0,0"/>
+					<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/sinav-kitaplari-3lu.jpg" Height="160" Margin="0,0,190,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="7">
+				<DockPanel>
+					<Label Content=" " Width="410" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
+					<TextBlock Text="Öne Çıkanlar" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
+					<Label Content=" " Width="255" Height="10" Background="#FFEBE7E7" Margin="28,0,0,0"/>
+					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="8">
+				<DockPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="9">
+				<DockPanel>
+					<Label Content=" " Width="450" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
+					<TextBlock Text="Kırtasiye" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
+					<Label Content=" " Width="280" Height="10" Background="#FFEBE7E7" Margin="28,0,0,0"/>
+					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="10">
+				<DockPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="11">
+				<DockPanel>
+					<Label Content=" " Width="450" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
+					<TextBlock Text="Elektronik" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
+					<Label Content=" " Width="275" Height="10" Background="#FFEBE7E7" Margin="28,0,0,0"/>
+					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="12">
+				<DockPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="13">
+				<DockPanel>
+					<Label Content=" " Width="420" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
+					<TextBlock Text="Hobi&amp;Oyuncak" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
+					<Label Content=" " Width="230" Height="10" Background="#FFEBE7E7" Margin="28,0,0,0"/>
+					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="14">
+				<DockPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="15">
+				<DockPanel>
+					<Label Content=" " Width="430" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
+					<TextBlock Text="Oyun&amp;Konsol" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
+					<Label Content=" " Width="250" Height="10" Background="#FFEBE7E7" Margin="28,0,0,0"/>
+					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="16">
+				<DockPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+						<StackPanel>
+
+						</StackPanel>
+					</Button>
+				</DockPanel>
+			</Border>
+			<Border Grid.Row="17">
+
 			</Border>
 		</Grid>
-		
-		
 	</ScrollViewer>	
 	    	
 </Window>

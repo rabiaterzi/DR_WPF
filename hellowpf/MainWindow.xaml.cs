@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace hellowpf
 {
@@ -23,14 +24,34 @@ namespace hellowpf
 		public MainWindow()
 		{
 			InitializeComponent();
-			/*this.AutoScroll = true;
-			this.HorizontalScroll.Enabled = true;
-			this.HorizontalScroll.Visible = true;
-			this.VerticalScroll.Enabled = true;
-			this.VerticalScroll.Visible = true;*/
-			
+			if (this.WindowState == System.Windows.WindowState.Normal)
+			{
+				this.WindowState = System.Windows.WindowState.Maximized;
+			}
+			else
+			{
+				this.WindowState = System.Windows.WindowState.Normal;
+			}
 		}
-
+		public static string[] Images = new string[16]
+		{
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-vakit-gecirme-ana-sayfa.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/turkuvaz-dergi_851x373_2.png",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/cok-satanlar-revize3-homepage.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0320_d_u_59_851x373_oyuncak_okazyon_lp.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/tum-kitap-kampanyalari-homepage1.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0320_d_u_60_851x373_elektronik_okazyon_lp.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0320_d_u_x_851x373_ayin_yayinevi_gunisigi.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/1019_d_u_x_851x373_lego_lp.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0220_d_u_x_851x373_haftanin_firsati_domingo.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/iletisim-kamp-homepage.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/metis-kampanya-homepage.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-tekloloji.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/les-ana-sayfa.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/sudoku-homepage.jpg",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/851x373_idefix_KaradenizKiyi.png",
+			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/taksit-sevenekleri-yeni.jpg",
+		};
 		private void Btngetcategories(object sender, RoutedEventArgs e)
 		{		
 			if(kategoriler.Width==1601)
@@ -44,50 +65,14 @@ namespace hellowpf
 				kategoriler.Width = 1601;
 				kategoriler.Margin = new Thickness(150,0,0,0);
 				festival.Visibility = Visibility.Visible;
-			}
-			/*WrapPanel wrapPanel = new WrapPanel();
-			wrapPanel.Name = "wrappanel";
-			wrapPanel.Height = 370;
-			wrapPanel.Width = 1600;
-			wrapPanel.Margin = new Thickness(0,0,0,200);
-			//wrapPanel.Margin = ;
-		for(int i=0;i<14;i++)
-			{
-				StackPanel stackPanel = new StackPanel();
-				stackPanel.Name = "stackpanel" + (i + 1).ToString();
-			}
-			StackPanel stackPanel = new StackPanel();
-			stackPanel.Height = 150;
-			stackPanel.Width = 200;
-			Image image = new Image();
-			//image.Source = https://www.iconfinder.com/icons/3366896/book_learning_student_icon;			
-			Label kitap = new Label();
-			kitap.Content = "Kitap";
-			kitap.FontSize = 25;
-			stackPanel.Children.Add(kitap);
-			StackPanel stackPanel2 = new StackPanel();
-			StackPanel stackPane3 = new StackPanel();
-			StackPanel stackPanel4 = new StackPanel();
-			StackPanel stackPanel5= new StackPanel();
-			StackPanel stackPanel6= new StackPanel();
-			StackPanel stackPanel7 = new StackPanel();
-			StackPanel stackPanel8 = new StackPanel();
-			StackPanel stackPanel9 = new StackPanel();
-			StackPanel stackPanel10 = new StackPanel();
-			StackPanel stackPanel11= new StackPanel();
-			StackPanel stackPanel12 = new StackPanel();
-			StackPanel stackPanel13 = new StackPanel();
-			StackPanel stackPanel14 = new StackPanel();
-			
-			wrapPanel.Children.Add(stackPanel);
-			//this.Content = wrapPanel;
-			//this.AddChild(wrapPanel);					
-			//wrapPanel.Visibility = Visibility.Visible;*/
-			
-			
-			
+			}		
 		}
-
+		private void kitapkategori(object sender,RoutedEventArgs e)
+		{
+			kitap_kategori kitap = new kitap_kategori();
+			kitap.Show();
+			this.Close();
+		}
 		private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
 		{
 		    
@@ -95,9 +80,9 @@ namespace hellowpf
 
 		private void Btnuyegirisi(object sender, RoutedEventArgs e)
 		{
-			uyelik uye = new uyelik();
-			this.Visibility = Visibility.Hidden;
-			uye.Show();
+			uye uye_ = new uye();
+			uye_.Show();
+			this.Close();
 		}
 
 		private void Btnsepet(object sender, RoutedEventArgs e)
@@ -109,58 +94,112 @@ namespace hellowpf
 		{
 
 		}
-		/*<WrapPanel Height = "300" Width="1600">
-									<StackPanel>
-										<MenuItem Header = "_kitap" >
-											< MenuItem.Icon >
-												< Image Source="https://www.iconfinder.com/icons/3366896/book_learning_student_icon"/>
-											</MenuItem.Icon>
-								        </MenuItem>
-									</StackPanel>
-									<StackPanel>
-										<MenuItem Header = "_E - Kitap" ></ MenuItem >
-									</ StackPanel >
-									< StackPanel >
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			var bc = new BrushConverter();
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-vakit-gecirme-ana-sayfa.jpg"));
+			
+			if (buton1.BorderBrush== Brushes.White)
+			{              
+				buton1.BorderBrush = Brushes.DarkBlue;
+				buton1.Background = Brushes.White;			
+			}
+			else
+			{
+				buton1.Background = (Brush)bc.ConvertFrom("#FFBAB2B2");
+				buton1.BorderBrush = Brushes.White;
+			}
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/turkuvaz-dergi_851x373_2.png"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_2(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/cok-satanlar-revize3-homepage.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_3(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0320_d_u_59_851x373_oyuncak_okazyon_lp.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_4(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/tum-kitap-kampanyalari-homepage1.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_5(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0320_d_u_60_851x373_elektronik_okazyon_lp.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_6(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0320_d_u_x_851x373_ayin_yayinevi_gunisigi.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_7(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/1019_d_u_x_851x373_lego_lp.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_8(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0220_d_u_x_851x373_haftanin_firsati_domingo.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_9(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/iletisim-kamp-homepage.jpg"));
+		}
 
-									</ StackPanel >
-									< StackPanel >
+		private void Button_Click_10(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/metis-kampanya-homepage.jpg"));
+		}
 
-									</ StackPanel >
+		private void Button_Click_11(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-tekloloji.jpg"));
+			
+		}
 
+		private void Button_Click_12(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/les-ana-sayfa.jpg"));
+		}
 
+		private void Button_Click_13(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/sudoku-homepage.jpg"));
+		}
 
-								</ WrapPanel >*/
+		private void Button_Click_14(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/851x373_idefix_KaradenizKiyi.png"));
+		}
 
+		private void Button_Click_15(object sender, RoutedEventArgs e)
+		{
+			resim1.Source = new BitmapImage(new Uri("https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/taksit-sevenekleri-yeni.jpg"));
+		}
 
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			DispatcherTimer dt = new DispatcherTimer();			
+			dt.Interval = TimeSpan.FromSeconds(10);
+			dt.Tick += dtTicker;
+			dt.Start();
+		}
+		private int increment = 0;
+		private void dtTicker(object sender, EventArgs e)
+		{
+			increment++;
+			//resim1.Source=Images[increment].
+		}
 	}
 }

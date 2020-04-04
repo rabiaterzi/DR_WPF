@@ -1,15 +1,12 @@
-﻿<Page x:Class="hellowpf.uyelik"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:hellowpf"
-      mc:Ignorable="d" 
-      d:DesignHeight="2000" d:DesignWidth="1600"
-      Title="uyelik"
-	  Background="White">
-
-	<Grid>
+﻿<Window x:Class="hellowpf.uye"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hellowpf"
+        mc:Ignorable="d"
+        Title="uye" Height="1300" Width="1600">
+    <Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="70"/>
 			<RowDefinition Height="750"/>
@@ -42,7 +39,7 @@
 		<Border Grid.Row="1">
 			<DockPanel>
 				<Border Height="630" Width="540" BorderBrush="#9da2ab" BorderThickness="1" Margin="220,0,0,0">
-				    <StackPanel>
+					<StackPanel>
 						<Label Content="Üye Girişi" HorizontalAlignment="Center" FontSize="45" FontWeight="Bold" Margin="0,25,0,0" />
 						<Label Content=" " Background="LightGray" Width="12" Height="1"/>
 						<Label Content="D&amp;R Eğlence Dünyasına Hoşgeldiniz!" FontSize="13" HorizontalAlignment="Center" Margin="0,10,0,0"/>
@@ -58,7 +55,7 @@
 						<Button Content="Gizlilik İlkesi" BorderBrush="White" Background="White" Foreground="#9e9e9e" Margin="0,10,0,0" Width="80"/>
 						<Button Content="GİRİŞ YAP" Height="50" Width="430" FontSize="20" Background="#b0b6c0" Foreground="White" Margin="0,10,0,0" BorderBrush="White"/>
 					</StackPanel>
-			    </Border>
+				</Border>
 				<Border Height="630" Width="540" BorderBrush="#9da2ab" BorderThickness="1" Margin="0,0,200,0" >
 					<StackPanel>
 						<Label Content="Üye Ol" HorizontalAlignment="Center" FontSize="45" FontWeight="Bold" Margin="0,25,0,0" />
@@ -73,4 +70,5 @@
 			</DockPanel>
 		</Border>
 	</Grid>
-</Page>
+
+</Window>

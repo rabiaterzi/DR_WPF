@@ -7,12 +7,42 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="EdebiyatKategori.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="edebiyat_kategori.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KitapKategori.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="kitap_kategori.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="uye.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="uyelik.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="EdebiyatKategori.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="edebiyat_kategori.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KitapKategori.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="kitap_kategori.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="uye.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="uyelik.xaml">
