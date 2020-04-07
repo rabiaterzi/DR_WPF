@@ -11,6 +11,7 @@
 
 		<Grid>
 			<Grid.RowDefinitions>
+				<RowDefinition Height="50"/>
 				<RowDefinition Height="70"/>
 				<RowDefinition Height="350"/>
 				<RowDefinition Height="420"/>
@@ -31,7 +32,10 @@
 				<RowDefinition Height="210"/>
 				<RowDefinition />
 			</Grid.RowDefinitions>
-			<Border Grid.Row="0" Background="#f9f8f4" HorizontalAlignment="Left" Width="1600">
+			<Border Grid.Row="0">
+				<Label Name="ticker" Background="Blue" Content="Kral Şakir 8, satışta!" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+			</Border>
+			<Border Grid.Row="1" Background="#f9f8f4" HorizontalAlignment="Left" Width="1600">
 				<DockPanel>
 					<Button Width="72" Height="56" Margin="40,0,0,0" >
 						<Image Source="https://www.dr.com.tr/Themes/DR/Content/assets/images/general/head-logo.png"/>
@@ -55,7 +59,7 @@
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="1" Name="menu">
+			<Border Grid.Row="2" Name="menu">
 				<DockPanel>
 					<Image Name="festival" Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/0220_d_u_24_1140x290_mart_kitap_festivali_lp.jpg" Height="280" Margin="210,0,0,0"/>
 					<WrapPanel Name="kategoriler" Height="350" Width="1601" Margin="150,0,0,0">
@@ -174,7 +178,7 @@
 					</WrapPanel>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="2">
+			<Border Grid.Row="3">
 				<StackPanel>
 					<Border Grid.Row="0" Height="370">
 						<DockPanel>
@@ -206,10 +210,10 @@
 					</Border>
 				</StackPanel>
 			</Border>
-			<Border Grid.Row="3">
+			<Border Grid.Row="4">
 				<Label Content="Kral Şakir 8, satışta!..>" Width="1100" Background="Red" Foreground="White" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 			</Border>
-			<Border Grid.Row="4">
+			<Border Grid.Row="5">
 				<DockPanel>
 					<Label Content=" " Width="450" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
 					<TextBlock Text="Kitap" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
@@ -217,48 +221,48 @@
 					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="5">
+			<Border Grid.Row="6">
 				<DockPanel>
-					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel x:Name="kitap1">
+							<Image Source="{Binding Path=images}" Height="30" Width="40"/>
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
-
-						</StackPanel>
-					</Button>
-					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="6">
+			<Border Grid.Row="7">
 				<DockPanel>
 					<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/cizgi-roman-3lu-2.jpg" Height="160" Margin="210,0,0,0"/>
 					<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/yabanci-dil-kitaplari-no-campaign.jpg" Height="160" Margin="50,0,0,0"/>
 					<Image Source="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/sinav-kitaplari-3lu.jpg" Height="160" Margin="0,0,190,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="7">
+			<Border Grid.Row="8">
 				<DockPanel>
 					<Label Content=" " Width="410" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
 					<TextBlock Text="Öne Çıkanlar" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
@@ -266,41 +270,41 @@
 					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="8">
+			<Border Grid.Row="9">
 				<DockPanel>
-					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel >
+							
+						</StackPanel>
+					</Button>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel x:Name="urun2">
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel x:Name="urun3">
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel x:Name="urun4">
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel x:Name="urun5">
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
-
-						</StackPanel>
-					</Button>
-					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
-						<StackPanel>
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
+						<StackPanel x:Name="urun6">
 
 						</StackPanel>
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="9">
+			<Border Grid.Row="10">
 				<DockPanel>
 					<Label Content=" " Width="450" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
 					<TextBlock Text="Kırtasiye" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
@@ -308,41 +312,41 @@
 					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="10">
+			<Border Grid.Row="11">
 				<DockPanel>
-					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="11">
+			<Border Grid.Row="12">
 				<DockPanel>
 					<Label Content=" " Width="450" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
 					<TextBlock Text="Elektronik" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
@@ -350,41 +354,41 @@
 					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="12">
+			<Border Grid.Row="13">
 				<DockPanel>
-					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="13">
+			<Border Grid.Row="14">
 				<DockPanel>
 					<Label Content=" " Width="420" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
 					<TextBlock Text="Hobi&amp;Oyuncak" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
@@ -392,41 +396,41 @@
 					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="14">
+			<Border Grid.Row="15">
 				<DockPanel>
-					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="15">
+			<Border Grid.Row="16">
 				<DockPanel>
 					<Label Content=" " Width="430" Height="10" Background="#FFEBE7E7" Margin="210,0,0,0" />
 					<TextBlock Text="Oyun&amp;Konsol" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Yu Gothic Light" />
@@ -434,41 +438,41 @@
 					<Label Content="Tümünü Görüntüle -->" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="0,0,200,0"/>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="16">
+			<Border Grid.Row="17">
 				<DockPanel>
-					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="210,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="15,0,0,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
-					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF">
+					<Button Background="White" Width="170" Margin="0,0,200,0" BorderBrush="#FFCDBFBF" Click="urunayrıntı">
 						<StackPanel>
 
 						</StackPanel>
 					</Button>
 				</DockPanel>
 			</Border>
-			<Border Grid.Row="17">
+			<Border Grid.Row="18">
 
 			</Border>
 		</Grid>

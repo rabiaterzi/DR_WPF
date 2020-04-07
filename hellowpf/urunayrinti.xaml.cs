@@ -14,11 +14,11 @@ using System.Windows.Threading;
 namespace hellowpf
 {
 	/// <summary>
-	/// Interaction logic for kitap_kategori.xaml
+	/// Interaction logic for urunayrinti.xaml
 	/// </summary>
-	public partial class kitap_kategori : Window
+	public partial class urunayrinti : Window
 	{
-		public kitap_kategori()
+		public urunayrinti()
 		{
 			InitializeComponent();
 			if (this.WindowState == System.Windows.WindowState.Normal)
@@ -30,30 +30,8 @@ namespace hellowpf
 				this.WindowState = System.Windows.WindowState.Normal;
 			}
 		}
-		private void Btnara(object sender, RoutedEventArgs e)
-		{
 
-		}
-
-		private void Btnuyegirisi(object sender, RoutedEventArgs e)
-		{
-			uye uye_ = new uye();
-			uye_.Show();
-			this.Close();	
-		}
-
-		private void Btnsepet(object sender, RoutedEventArgs e)
-		{
-			sepetim sepet = new sepetim();
-			sepet.Show();
-			this.Close();
-		}
-
-		private void Btngetcategories(object sender, RoutedEventArgs e)
-		{
-
-		}
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			DispatcherTimer dt = new DispatcherTimer();
 			dt.Interval = TimeSpan.FromSeconds(5);
@@ -61,11 +39,11 @@ namespace hellowpf
 			dt.Start();
 		}
 		private void dtTicker(object sender, EventArgs e)
-		{		
-			if(ticker.Background==Brushes.Blue)
+		{
+			if (ticker.Background == Brushes.Blue)
 			{
 				ticker.Content = "EVDE HAYAT VAR!";
-			   	ticker.Background = Brushes.Orange;					
+				ticker.Background = Brushes.Orange;
 			}
 			else if (ticker.Background == Brushes.Orange)
 			{
@@ -89,11 +67,28 @@ namespace hellowpf
 			}
 		}
 
-		private void edebiyatkategori(object sender, RoutedEventArgs e)
+		private void Btngetcategories(object sender, RoutedEventArgs e)
 		{
-			edebiyat_kategori edebiyat = new edebiyat_kategori();
-			edebiyat.Show();
-			this.Close();	
+
+		}
+
+		private void Btnara(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Btnuyegirisi(object sender, RoutedEventArgs e)
+		{
+			uye uye_ = new uye();
+			uye_.Show();
+			this.Close();
+		}
+
+		private void Btnsepet(object sender, RoutedEventArgs e)
+		{
+			sepetim sepet = new sepetim();
+			sepet.Show();
+			this.Close();
 		}
 
 		private void anasayfa(object sender, RoutedEventArgs e)
@@ -103,6 +98,10 @@ namespace hellowpf
 			this.Close();
 		}
 
-		
+		private void sepeteekle(object sender, RoutedEventArgs e)
+		{
+			MessageBox.Show("Ürün alışveriş sepetinize eklendi");
+			
+		}
 	}
 }

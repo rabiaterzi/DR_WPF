@@ -13,11 +13,11 @@ using System.Windows.Shapes;
 namespace hellowpf
 {
 	/// <summary>
-	/// Interaction logic for uye.xaml
+	/// Interaction logic for sepetim.xaml
 	/// </summary>
-	public partial class uye : Window
+	public partial class sepetim : Window
 	{
-		public uye()
+		public sepetim()
 		{
 			InitializeComponent();
 			if (this.WindowState == System.Windows.WindowState.Normal)
@@ -28,34 +28,6 @@ namespace hellowpf
 			{
 				this.WindowState = System.Windows.WindowState.Normal;
 			}
-		}
-		private void Btngetcategories(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void Btnara(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void Btnuyegirisi(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void Btnsepet(object sender, RoutedEventArgs e)
-		{
-			sepetim sepet = new sepetim();
-			sepet.Show();
-			this.Close();
-		}
-
-		private void anasayfa(object sender, RoutedEventArgs e)
-		{
-			MainWindow mw = new MainWindow();
-			mw.Show();
-			this.Close();
 		}
 	}
 }

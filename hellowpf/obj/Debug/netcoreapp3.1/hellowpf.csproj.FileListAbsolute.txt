@@ -15,14 +15,8 @@ C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\hellowpf.A
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\hellowpf.AssemblyInfo.cs
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\hellowpf.dll
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\hellowpf.pdb
-C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\uyelik.g.cs
-C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\uyelik.baml
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\hellowpf.csproj.CoreCompileInputs.cache
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\hellowpf.genruntimeconfig.cache
-C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\KitapKategori.g.cs
-C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\KitapKategori.baml
-C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\EdebiyatKategori.g.cs
-C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\EdebiyatKategori.baml
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\edebiyat_kategori.g.cs
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\kitap_kategori.g.cs
@@ -30,3 +24,7 @@ C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\uye.g.cs
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\edebiyat_kategori.baml
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\kitap_kategori.baml
 C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\uye.baml
+C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\urunayrinti.g.cs
+C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\urunayrinti.baml
+C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\sepetim.g.cs
+C:\Users\terzi\source\repos\hellowpf\hellowpf\obj\Debug\netcoreapp3.1\sepetim.baml

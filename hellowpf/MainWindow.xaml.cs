@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using hellowpf.viewmodel;
 
 namespace hellowpf
 {
@@ -23,6 +24,7 @@ namespace hellowpf
 	{
 		public MainWindow()
 		{
+			DataContext = this;
 			InitializeComponent();
 			if (this.WindowState == System.Windows.WindowState.Normal)
 			{
@@ -32,7 +34,18 @@ namespace hellowpf
 			{
 				this.WindowState = System.Windows.WindowState.Normal;
 			}
+			Image images = new Image();
+			images.Source = new BitmapImage(new Uri("https://i.dr.com.tr/cache/154x170-0/originals/0001868498001-1.jpg"));
+			for (int i=0;i<7;i++)
+			{
+
+				Image image = new Image();
+				image.Source = new BitmapImage(new Uri("https://i.dr.com.tr/cache/154x170-0/originals/0001868498001-1.jpg"));
+
+			}
+			
 		}
+		
 		public static string[] Images = new string[16]
 		{
 			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/evde-vakit-gecirme-ana-sayfa.jpg",
@@ -53,7 +66,7 @@ namespace hellowpf
 			@"https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/taksit-sevenekleri-yeni.jpg",
 		};
 		private void Btngetcategories(object sender, RoutedEventArgs e)
-		{		
+		{
 			if(kategoriler.Width==1601)
 			{
 				festival.Visibility = Visibility.Hidden;
@@ -191,15 +204,62 @@ namespace hellowpf
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			DispatcherTimer dt = new DispatcherTimer();			
-			dt.Interval = TimeSpan.FromSeconds(10);
+			dt.Interval = TimeSpan.FromSeconds(5);
 			dt.Tick += dtTicker;
 			dt.Start();
+
+			DispatcherTimer resim = new DispatcherTimer();
+			resim.Interval = TimeSpan.FromSeconds(5);
+			resim.Tick += dtticker;
+			resim.Start();
 		}
-		private int increment = 0;
+        private int increment = 0;
+		private void dtticker(object sender, EventArgs e)
+		{
+			if(increment==16)
+			{
+				increment = 0;
+			}
+			//Images[increment] = resim1.Source.ToString();
+			resim1.Source = new BitmapImage(new Uri(Images[increment]));
+			increment++;
+		}
+
+		
 		private void dtTicker(object sender, EventArgs e)
 		{
-			increment++;
-			//resim1.Source=Images[increment].
+			if (ticker.Background == Brushes.Blue)
+			{
+				ticker.Content = "EVDE HAYAT VAR!";
+				ticker.Background = Brushes.Orange;
+			}
+			else if (ticker.Background == Brushes.Orange)
+			{
+				ticker.Content = "Yazarından İmzalı Kitapları Kaçırmayın";
+				ticker.Background = Brushes.DarkRed;
+			}
+			else if (ticker.Background == Brushes.DarkRed)
+			{
+				ticker.Content = "Ön Okuma özellikli kitaplar dr.com.tr'de!..";
+				ticker.Background = Brushes.Black;
+			}
+			else if (ticker.Background == Brushes.Black)
+			{
+				ticker.Content = "İndirimli Kitap Setleri";
+				ticker.Background = Brushes.Maroon;
+			}
+			else if (ticker.Background == Brushes.Maroon)
+			{
+				ticker.Content = "Kral Şakir 8, satışta!";
+				ticker.Background = Brushes.Blue;
+			}
+		}
+
+		private void urunayrıntı(object sender, RoutedEventArgs e)
+		{
+			urunayrinti urun = new urunayrinti();
+			urun.Show();
+			this.Close();
 		}
 	}
 }
