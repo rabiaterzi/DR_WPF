@@ -1,4 +1,4 @@
-D&R e-ticaret sitesinin WPF kullanılarak masaüstü uygulamasının geliştirilmesidir.
+D&R e-ticaret sitesinin WPF kullanılarak windows form uygulamasının geliştirilmesidir.
 
 ![Ekran Alıntısı](https://user-images.githubusercontent.com/40807720/113708398-d761f680-96e9-11eb-9a8c-81b866d28fc9.PNG)
 ![Ekran Alıntısı5](https://user-images.githubusercontent.com/40807720/113708582-155f1a80-96ea-11eb-9a9b-878fb27ac30b.PNG)
